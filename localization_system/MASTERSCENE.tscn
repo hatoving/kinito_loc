@@ -9,12 +9,11 @@ script = ExtResource( 1 )
 layer = 128
 
 [node name="LineEdit3" type="TextEdit" parent="CanvasLayer"]
-visible = false
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -322.0
-margin_top = 170.0
-margin_bottom = 300.0
+margin_top = 224.702
+margin_bottom = 354.702
 wrap_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false

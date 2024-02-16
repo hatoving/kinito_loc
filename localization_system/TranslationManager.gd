@@ -4,7 +4,10 @@ var files_loaded = false
 
 var patched_pc = false
 var patched_desktop = false
+var patched_internet = false
 var patched_dialogue = false
+
+var added_desktop_icon = false
 
 var current_lang = "en"
 
@@ -49,25 +52,10 @@ func load_translation_files(lang):
 		
 	patched_dialogue = false
 	patched_pc = false
+	patched_internet = false
 	patched_desktop = false
 	
 	return true
-	
-func patch_kinito_dialogue(animation, dialogue, audio):
-	var text_track = animation.find_track("Pet/Pet/tts/tts/tts/SpeachBubble/Text:bbcode_text")
-	var aud_track = animation.find_track("Dio/AUDIOLINES/LINE:stream")
-	
-	if dialogue != null:
-		for n in range(animation.track_get_key_count(text_track)):
-			animation.track_set_key_value(text_track, n, dialogue[n])
-
-	for n in range(animation.track_get_key_count(aud_track)):
-		if audio[n] != null or audio[n] != "":
-			var audio_file = load(audio[n])
-			while(audio_file == null):
-				yield(get_tree(), "idle_frame")
-				
-			animation.track_set_key_value(aud_track, n, audio_file)
 				
 func _ready():
 	files_loaded = load_translation_files("en")
@@ -90,6 +78,40 @@ func _show_localized():
 	if kinito_loc.kinito_common_text[path] != null and last_path != path:
 		$CanvasLayer/ColorRect2/RichTextLabel2.bbcode_text = kinito_loc.kinito_common_text[path]
 		last_path = path
+		
+func patch_kinito_dialogue(animation, dialogue, audio):
+	var text_track = animation.find_track("Pet/Pet/tts/tts/tts/SpeachBubble/Text:bbcode_text")
+	var aud_track = animation.find_track("Dio/AUDIOLINES/LINE:stream")
+	
+	if dialogue != null:
+		for n in range(animation.track_get_key_count(text_track)):
+			animation.track_set_key_value(text_track, n, dialogue[n])
+
+	for n in range(animation.track_get_key_count(aud_track)):
+		if audio[n] != null or audio[n] != "":
+			var audio_file = load(audio[n])
+			while(audio_file == null):
+				yield(get_tree(), "idle_frame")
+				
+			animation.track_set_key_value(aud_track, n, audio_file)
+			
+func patch_animation_track(animation, track, values):
+	var _t = animation.find_track(track)
+
+	if _t != null and values != null:
+		for n in range(animation.track_get_key_count(_t)):
+			animation.track_set_key_value(_t, n, values[n])
+			
+func get_animation_track(animation, track):
+	var _t = animation.find_track(track)
+	
+	$CanvasLayer/LineEdit3.text = "[ "
+
+	if _t != null:
+		for n in range(animation.track_get_key_count(_t)):
+			$CanvasLayer/LineEdit3.text += "\"" + animation.track_get_key_value(_t, n) + "\", "
+			
+	$CanvasLayer/LineEdit3.text += " ]"
 
 func _patch_computer_app(app_name, localized_name):
 	var app = get_parent().get_parent().get_node("0").get_node("PC/Aspect/" + app_name)
@@ -136,6 +158,20 @@ func _patch_app000():
 			_patch_computer_app("3D_Pinball", "PC_APPS_PINBALL")
 			_patch_computer_app("OS_Paint", "PC_APPS_PAINT")
 			patched_desktop = true
+			
+		if !added_desktop_icon and get_parent().get_parent().get_node("0/PC/Aspect/") != null:
+			var desktopObj = load("res://-Scenes/Application000/Sub/Desktop_Object.tscn").instance()
+			desktopObj.Name = kinito_loc.kinito_common_text["COMMON_LANGUAGES"]
+			desktopObj.ButtonNumber = 20
+			desktopObj.DskTexture = load("res://-Asset/App000/PC/Icons/Folder.png")
+			
+			get_parent().get_parent().get_node("0").get_node("PC/Aspect").add_child(desktopObj)
+			added_desktop_icon = true
+		elif get_parent().get_parent().get_node("0/PC/Aspect/") == null:
+			added_desktop_icon = false
+	else:
+		patched_desktop = false
+		added_desktop_icon = false
 				
 func _patch_app001():
 	if Tab.data["open"][1] == true:
@@ -146,6 +182,8 @@ func _patch_app001():
 			for name in dio.get_animation_list():
 				patch_kinito_dialogue(dio.get_animation(name), (kinito_loc.kinito_dialogue[name])[0], (kinito_loc.kinito_dialogue[name])[1])
 			patched_dialogue = true
+	else:
+		patched_dialogue = false
 
 func _patch_app003():
 	if Tab.data["open"][3] == true:
@@ -179,6 +217,39 @@ func _patch_app003():
 			window_button_1.text = kinito_loc.kinito_common_text["COMMON_CONTINUE"]
 		if window_button_2 != null:
 			window_button_2.text = kinito_loc.kinito_common_text["COMMON_OK"]
+			
+func _patch_app005():
+	if Tab.data["open"][5] == true:
+		var oc : AnimationPlayer = get_parent().get_parent().get_node("5").get_node("Tab/OC")
+		var welcome = get_parent().get_parent().get_node("5").get_node("Tab/Active/RichTextLabel")
+		
+		if !patched_internet:
+			if oc != null:
+				patch_animation_track(oc.get_animation("0"), "Active/Active/ASSET/Download/Info:bbcode_text", kinito_loc.kinito_common_text["PC_INTERNET_CONNECTING"])
+			#get_animation_track(oc.get_animation("0"), "Active/Active/ASSET/Download/Info:bbcode_text")
+			if welcome != null:
+				welcome.bbcode_text = kinito_loc.kinito_common_text["PC_INTERNET_WELCOME"]
+			patched_internet = true
+		
+		var current_tab = get_parent().get_parent().get_node("5").get_children()[0]
+		
+		if current_tab != null:
+			var blog_post_text = current_tab.get_node("Active/ScrollContainer/HBoxContainer/Control/ColorRect2/0/B")
+			if blog_post_text != null:
+				blog_post_text.bbcode_text = kinito_loc.kinito_common_text["PC_INTERNET_S0"]
+				blog_post_text.bbcode_text = blog_post_text.bbcode_text.replace("[Term]", Vars.get("SearchTerm")).replace("[TERM]", Vars.get("SearchTerm")).replace("[term]", Vars.get("SearchTerm"))
+				
+			var blog_post_header = current_tab.get_node("Active/ScrollContainer/HBoxContainer/Control/ColorRect2/0/A")
+			if blog_post_header != null:
+				blog_post_header.bbcode_text = kinito_loc.kinito_common_text["PC_INTERNET_S0_HEADER"]
+				blog_post_header.bbcode_text = blog_post_header.bbcode_text.replace("[Term]", Vars.get("SearchTerm")).replace("[TERM]", Vars.get("SearchTerm")).replace("[term]", Vars.get("SearchTerm"))
+			
+			var title = current_tab.get_node("Active/Title")
+			if title != null:
+				title.text = kinito_loc.kinito_common_text["WINDOW_TITLE_INTERNET"]
+#			blog_post_text.bbcode_text = kinito_loc.kinito_common_text["PC_INTERNET_S0"]
+	else:
+		patched_internet = false
 
 func _patch_app007():
 	var patched_button = false
@@ -230,7 +301,6 @@ func _patch_app007():
 		act3_vhs.bbcode_text = kinito_loc.kinito_common_text["PC_SETTINGS_ACT3"]
 		
 		data_title.text = kinito_loc.kinito_common_text["PC_SETTINGS_DATA"]
-		
 		reset_button.text = kinito_loc.kinito_common_text["PC_SETTINGS_RESET"]
 		
 		if !patched_button:
@@ -242,6 +312,8 @@ func _patch_app007():
 		
 		finish.text = kinito_loc.kinito_common_text["COMMON_FINISH"]
 		last_save.text = kinito_loc.kinito_common_text["COMMON_LSAVED"] % Data.data["lastSave"]
+	else:
+		patched_button = false
 
 func _patch_app010():
 	#NROOT/_/Active/Label
@@ -249,11 +321,18 @@ func _patch_app010():
 		var last_save = get_parent().get_parent().get_node("10").get_node("NROOT/_/Active/Label")
 		if last_save != null:
 			last_save.text = kinito_loc.kinito_common_text["COMMON_LSAVED"] % Data.data["lastSave"]
+			
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.doubleclick and event.button_index == BUTTON_LEFT:
+			if(Tab.buttonValue == 20):
+				Tab.msgBox("Languages", "Current Langauge loaded:\n" + current_lang, 0, "Really", "Cool", 0)
 
 func _process(delta):
 	# Patch intro screen (PC)
 	_show_node_paths()
 	if files_loaded:
+		#res://-Asset/!OutOfMonitor/SelfPaint/selfpaint.tscn
 		if Input.is_key_pressed(KEY_TAB):
 			files_loaded = load_translation_files("en")
 		
@@ -265,5 +344,6 @@ func _process(delta):
 		_patch_app000()
 		_patch_app001()
 		_patch_app003()
+		_patch_app005()
 		_patch_app007()
 		_patch_app010()

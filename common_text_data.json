@@ -1,0 +1,261 @@
+{
+	"COMMON_LANGUAGES": "Languages",
+	
+	"COMMON_BOOT_SCREEN": "OPERATING SYSTEM, BIOS V2.5\nCopyright (C) 19XX-XX, Operating System\n\n==================\n[i]MUSIC BY:[/i]         \nJOEL TUMELTY   \n==================\n\nBIOS Checking System Health OK =V6.32\nCPU and ALU at XX000Hz\n<CPU ID:135987 Patch ID:0001>\nMemory Test   :   XXXXXX k   OK\n\nBIOS BOOT V1 (Sequence system)\nCopyright (C) 19XX-XX, BIOS boot.\n   Detecting OS as Operating Systems    ... GRANTED\n   Detecting System input as M&K        ... GRANTED\n   Detecting CRT output as ___          ... NaN\n   Detecting finish sequence as TRUE    ... TRUE\n\n\n\n\n\n\n\nPress F12 to enter SETUP\nXX/XX/XXXX-283UHJ2-SF9U8G-9237NF-XX\n\n\n\n",
+	"COMMON_A_GAME_BY": "A GAME BY >\n[i]█ │█│ █ █ █  █│█ █ │ █│[/i]\n//troy_en..........",
+	
+	"COMMON_PASSWORD": "Password",
+	"COMMON_LOADING": "Loading",
+	
+	"COMMON_CONTINUE": "Continue >",
+	"COMMON_FINISH": "Finish >",
+	"COMMON_OK": "OK",
+	
+	"COMMON_YES": "Yes",
+	"COMMON_NO": "No",
+	
+	"COMMON_LSAVED": "last saved: %s",
+	"COMMON_LSAVED_NEVER": "never",
+
+	"RAND_WELCOME_HOLIDAYS": "happy holidays",
+	"RAND_WELCOME_HALLOWEEN": "get ready for a spook!",
+	"RAND_WELCOME_BACK": "Welcome Back",
+
+	"RAND_WELCOME_0": "Welcome",
+	"RAND_WELCOME_1": "I hope you're happy",
+	"RAND_WELCOME_2": "It was all just an accident",
+	"RAND_WELCOME_3": "Best friends forever!",
+	"RAND_WELCOME_4": "Best friends forever!",
+	"RAND_WELCOME_5": "How long has it been?",
+	"RAND_WELCOME_6": "Everlasting fun",
+	"RAND_WELCOME_7": ":-)",
+	"RAND_WELCOME_8": "Have fun!",
+	"RAND_WELCOME_9": "It's all so meaningless",
+	"RAND_WELCOME_10": "Who are you?",
+	"RAND_WELCOME_11": "Welcome Again",
+	"RAND_WELCOME_12": "Welcome Welcome Welcome Welcome Welcome Welcome Welcome",
+	"RAND_WELCOME_13": "Welcome Home",
+	"RAND_WELCOME_14": "Welcome Home",
+	"RAND_WELCOME_15": "This took longer than expected.",
+	"RAND_WELCOME_16": "Welcome Welcome Welcome Welcome Welcome Welcome Welcome",
+	"RAND_WELCOME_17": "You cannot leave!",
+	"RAND_WELCOME_18": "Time is endless!",
+	"RAND_WELCOME_19": "Try to remember!",
+	"RAND_WELCOME_20": ":P",
+	
+	"WINDOW_TITLE_WELCOME": "Welcome Back!",
+	"WINDOW_TITLE_HOWTO": "Welcome Back!",
+	
+	"WINDOW_CONTENTW_HEADER": "Welcome Back!",
+	"WINDOW_HOWTO_HEADER": "How to use!",
+	
+	"WINDOW_CONTENTW": "This game contains content that might not be suitable for everyone below is a manual the outlines more about the game:\n\n[url]https://kinitopet.com/readme[/url] or via [url=localdir2]local file[/url].\n\n- (NOTE: If you are broadcasting the game it is strongly recommended to read the manual)\n- [ In the settings there is a streamer mode ]\n- NOT SUITABLE FOR THOSE WITH PHOTOSENSITIVE EPILEPSY\n\nThank you.",
+	"WINDOW_HOWTO": "This game will save automatically throughout  the playthrough. You can view the last time the game was saved in the pause menu, and at settings menu. \nUse [SHIFT+SPACE] to skip the boot sequence.\n\nTo pause the game double tap the \"Pause Game\" application, then to close the game press \"Close Game\" from the menu.\n\nTo get started, double click an application to open it.\n\nPress 'Ok' to continue.",
+	
+	"PC_APPS_MYCOMPUTER": "My Computer",
+	"PC_APPS_SETTINGS": "Settings",
+	"PC_APPS_INTERNET": "The Internet",
+	"PC_APPS_PICTURES": "My Pictures",
+	"PC_APPS_MUSIC": "My Music",
+	"PC_APPS_MAIL": "E-MAIL",
+	"PC_APPS_PAUSE": "Pause Game",
+	"PC_APPS_MINESWEEPER": "Minesweeper",
+	"PC_APPS_PINBALL": "3D Pinball",
+	"PC_APPS_PAINT": "Paint",
+	
+	"WINDOW_TITLE_SETTINGS": "Settings",
+	"WINDOW_TITLE_RESET": "RESET GAME DATA",
+	
+	"PC_SETTINGS": "Settings",
+	"PC_SETTINGS_VOLUME": "Volume:",
+	
+	"PC_SETTINGS_MASTER": "Master Volume:",
+	"PC_SETTINGS_KBM": "Keyboard/Mouse Sounds:",
+	"PC_SETTINGS_AMBIENT": "Ambient Sounds:",
+	"PC_SETTINGS_MUSIC": "Music Volume:",
+	
+	"PC_SETTINGS_BACKGROUND": "Background:",
+	
+	"PC_SETTINGS_WINMODE": "[color=#2D2C22]Windowed Mode.[/color] \n* requires  restart    -   Runs the game in windowed mode in a 16:9 aspect ratio.",
+	"PC_SETTINGS_DESKTOPBG": "[color=#2D2C22]Allow custom desktop background.[/color] \n(will change the desktop background to the same as the\ngame background for added emersion when enabled)",
+	"PC_SETTINGS_DESKTOPEFFECT": "[color=#2D2C22]Allow custom game background effect.[/color] \n(will allow the CRT effect and other custom background\neffects to happen in game)",
+	"PC_SETTINGS_STREAMER": "[color=#2D2C22]Streamer Mode.[/color] \nStops some of the scares that use sensitive info.\n* WILL NOT STOP CAMERA SCARE (windows camera)",
+	"PC_SETTINGS_ACT3": "[color=#2D2C22]Remove VHS effect [act 3].[/color] \nRemoves VHS effect during ACT 3 [requires restart]",
+	
+	"PC_SETTINGS_DATA": "Data:",
+	
+	"PC_SETTINGS_RESET": "Reset game DATA",
+	
+	"PC_SETTINGS_RESETDESC": "*THIS CANNOT BE REVERSED.\nThis will entirely remove all game data, including\nsave files, settings data and player data.",
+	"PC_SETTINGS_RESETCONFIRM": "Are you sure you want to [shake]RESET[/shake] all save data?",
+	
+	"WINDOW_TITLE_INTERNET": "Web Browser",
+	
+	"PC_INTERNET_CONNECTING": [
+		"[center]Attempting to connect...\n",
+		"[center]Attempting to connect...\n",
+		"[center]Connecting...\n",
+		"[center]Connecting...\n",
+		"[center]Connected\n\n"
+	],
+	
+	"PC_INTERNET_WELCOME": "[center][wave]> welcome to the internet! ",
+	
+	"PC_INTERNET_TYPETO1": "type to search the web",
+	"PC_INTERNET_TYPETO2": "type to search",
+	
+	"PC_INTERNET_S0_HEADER": "New Blog Post:\nMy thoughts on [Term]...",
+	"PC_INTERNET_S0": "                                                  [b][Term][/b] has been a major topic in recent times due to its\n \t\t\t\t\t\t\t\t\t\t\t\t obvious impact on society as a whole!   \n \t\t\t\t\t\t\t\t\t\t\t     This piqued interest has resulted in centuries of science and \n \t\t\t\t\t\t\t\t\t\t\t\t invention to better understand [Term]. \n\t\t\t\t\t\t\t\t\t\t\t\t  That curiosity shall yeild no more! \n\t\t\t\t\t\t\t\t\t\t\t\t  As the answer to the [b][Term][/b] has finally been solved!\n\n\n\nThe recent in-depth study of [b][Term][/b] performed by \n{The Institution Of Global Sciences LTD Limmited INC}\n(TIOFSLLI) has determined that the long awaited solution\nis here! This news is so shocking that {The Non-Profit \nProfitable Research And Development Sector Of The\nUniversally Accepted Sciences} (TNPPRADSOTU) has \ndetermined that the news could be so shocking that most\njust seize up and assend to a greater plane of existence!\n\n \n                                                 With that being said! [b][Term]'s[/b] solution must first be solved! \n\t\t\t\t\t\t\t\t\t\t\t\t And it has been! And that is the fundementals behind why\n\t\t\t\t\t\t\t\t\t\t\t\t are universe operates! [b][Term][/b] is so strucularly important\n\t\t\t\t\t\t\t\t\t\t\t\t to are universe that the removal of it could break the very fabric of reality!\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\n\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream\nERROR 404: failed to load stream",
+	
+	"PC_INTERNET_S2_HEADER": "[i]Shop results for:[/i]\nOnline shoping results for [b][Term][/b].",
+	"PC_INTERNET_S2": "[i]The [Term] bag uses its unbearing style and irresistible looks are like no other.\nThe essense [Term] is perfectly enraptured in the unnaturally naturally sourced bamboo weaved bag that is sure to win over anyone at will.\n\n[Term] has been used to represent this bag as we feel its meaning is too deep to be represented in any other form.",
+	
+	"PC_INTERNET_S2_AD0": "[color=#000000]The [b][Term][/b] bag![i]\n[color=#555555][10.99€][/color]\n\n\n",
+	"PC_INTERNET_S2_AD1": "[b][Term][/b] bag!\n[i][10.99€] -34% OFF!!![/i]\n",
+	
+	"PC_INTERNET_S3_HEADER": "[Term] is overratted.....\n340,560 views   rated  3.4/5\n",
+	"PC_INTERNET_S3_DESC": "\nDescription:\n[i]Ill say it! [Term] is overated! ITS TRUE and I know some people can't handle this information!\n[fade]However....[/i]  \n",
+	
+	"PC_INTERNET_S3_COMMENTS": "\nComments:\n",
+	
+	"PC_INTERNET_S3C0_NAME": "[b]FantasTEX_5",
+	"PC_INTERNET_S3C0_STATUS": "[i]LIKE [34]         REPLY",
+	"PC_INTERNET_S3C0": "[i]Good video! Some of the points did seem a little biast since I think [Term] is atchually perfecly rated!1!",
+	
+	"PC_INTERNET_S3C1_NAME": "[b]x_BigDawg54_x\n",
+	"PC_INTERNET_S3C1_STATUS": "[i]LIKE [5]         REPLY",
+	"PC_INTERNET_S3C1": "[i]THIS IS NOT OKAY!!\nBig sad! [Term] good! 0/5 rate! (no hate inteended)",
+	
+	"PC_INTERNET_S3C2_NAME": "[b]_getGud22\n",
+	"PC_INTERNET_S3C2_STATUS": "[i]LIKE [1]         REPLY",
+	"PC_INTERNET_S3C2": "[i]AGREED! ignore da haters they just mad!\nROFL!1!!!",
+	
+	"PC_INTERNET_S3C3_NAME": "[b]85_germmaz_xx\n",
+	"PC_INTERNET_S3C3_STATUS": "[i]LIKE [6]         REPLY",
+	"PC_INTERNET_S3C3": "[i]You have really changed... This is really disapointing. Why [Term] what did it even do to you!",
+	
+	"PC_INTERNET_S3C4_NAME": "[b]amy_leaf78_<3\n",
+	"PC_INTERNET_S3C4_STATUS": "[i]LIKE [2]         REPLY",
+	"PC_INTERNET_S3C4": "[i]really cool vid xD.\nIt would be nice if you checked out my channel! :D it would make me very happy!",
+	
+	"PC_INTERNET_S3V0": "[b][Term][/b] is NOT [fade]overa...[/fade]\n[i]25,210 views\n",
+	"PC_INTERNET_S3V0_DESC": "[center][b][Term]",
+	
+	"PC_INTERNET_S3V1": "WORKING 100% [fade]FREE..[/fade]\n[i]132,740 views\n",
+	"PC_INTERNET_S3V2": "What makes [Term], work...\n125,210 views\n",
+	"PC_INTERNET_S3ERROR": "ERROR\n[i]VIDEO FAILED TO BE ENCODED\n",
+	
+	"WINDOW_TITLE_KPETWIZARD": "KinitoPET Setup Wizard",
+	
+	"WINDOW_KPETWIZARD_HEADER": "KinitoPET Virtual Assistant Setup Wizard",
+	"WINDOW_KPETWIZARD_TEXT": "This wizard will guide you through the installation of KinitoPET Virtual Assistant.\n\nBy pressing 'Next' you are agreeing to the terms outlined by The Kinito Leisure and Entertainment Company. And the prompted installation to be carried out on your device. Relevant system files will download, please do not turn off your computer as this could cause unwanted corruption of files.\n\n\n\n\nClick Next to continue.\n",
+	
+	"PC_KPETWIZARD_NEXT": "Next >",
+	
+	"WINDOW_KPETWIZARD_HEADERFINISH": "KinitoPET Virtual Assistant Setup",
+	"WINDOW_KPETWIZARD_TEXTFINISH": "The KinitoPET Virtual Assistant setup wizard has finished.\nThe KinitoPET Virtual Assistant is now on your desktop.\n\nTo open the application please go to your desktop.\n\n\n\n\n\n\nClick FINISH to close.",
+	
+	"PC_KPETWIZARD_DOWNLOAD": [
+		"Loading:\nsmtgImp.exe data files active",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\nsmtgImp.exe data files active x_13",
+		"Loading:\ndata flow channel_0x",
+		"Loading:\n-Assets_x01",
+		"Loading:\n-Assets_x02_m",
+		"Loading:\n-Assets_x03",
+		"Loading:\n-Sceens_x01",
+		"Loading:\n-Assets_x10",
+		"Loading:\n-Assets_x140 from kinitopet.com",
+		"Loading:\n-Assets_x01",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\nstop while you can",
+		"Loading:\n-Assets_x10",
+		"Loading:\n-Script script data load +1",
+		"Loading:\n-Script script data load +2.4m",
+		"Loading:\n-Script script data active: NAN",
+		"Loading:\nthere is still time",
+		"Loading:\nsmtgImp.exe data files active x_02 - crash negative",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\ndata flow channel_0x",
+		"Loading:\nsmtgImp.exe data files active x_13 : COMPLETE",
+		"Loading:\ndata.pck from www.kinitopet.com x_0x2",
+		"Loading:\ndata.pck from www.kinitopet.com x_5x3",
+		"Loading:\ndata.pck from www.kinitopet.com x_5x8",
+		"Loading:\nsmtgImp.exe data files active",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\ndata flow channel_0x",
+		"Loading:\nsmtgImp.exe data files active x_02 ",
+		"Loading:\nsmtgImp.exe data files active x_13",
+		"Loading:\n-Script script data load +2.4m",
+		"Loading:\n-Script script data active: NAN",
+		"Loading:\ndata.pck from www.kinitopet.com x_5x3",
+		"Loading:\nsmtgImp.exe data files active x_0234342",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\ndata flow channel_0x",
+		"Loading:\nsmtgImp.exe data files active x_02 ",
+		"Loading:\nytTY.xyz  download: site export",
+		"Loading:\nloading-data-img_LNK",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\nloading-data-img_LNK 0x_13",
+		"Loading:\n-Assets_x01",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\nSTOP WHILE YOU STILL CAN",
+		"Loading:\n-Assets_x10",
+		"Loading:\n-Script script data load +1",
+		"Loading:\n-Script script data load +2.4m",
+		"Loading:\nthere is still time",
+		"Loading:\nsmtgImp.exe data files active x_02 - crash negative",
+		"Loading:\nsmtgImp.exe data files active x_02",
+		"Loading:\ndata flow channel_0x"
+	],
+	
+	"KPET_LAUNCH_FIRSTTIME": "C:\\Users\\[username]\\desktop> -find kinitopet.exe\n> finding kinitopet.exe...\n> kinitopet.exe name(\"KinitoPET\") found.\n\n> building... - [[b]█ █ █ █ █ █ █ █[/b]]\n\n> info: Version: 4.2.3 - Sonny . C\n\n\n> Running....",	
+	"KPET_NAME": "KinitoPET would like to know your name.",
+	
+	"KPET_STORY_WTITLE": "Kinito is asking something...",
+	"KPET_STORY_W": "Would you like to read Kinito's story?",
+	
+	"STORY_PAGE1_0": "[center]Kinito was home when a package came to the door.",
+	"STORY_PAGE1_1": "[center]But who was it from and who was it for?",
+	
+	"KPET_BFAH_TITLE": "(KinitoPET.exe) - Best Friends Analysis Hub",
+	
+	"KPET_YWC_TITLE": "KinitoPET.exe - Compiling (Administrator)",
+	
+	"KPET_YWC_DWNFILE": "%RANDOM%_File [!assets[%%i]! %RANDOM%] downloaded from server [\"kinito\"] %TIME%",
+	"KPET_YWC_MODFILE": "%RANDOM%_Local file [!assets[%%i]! %RANDOM%] modified %TIME%",
+	"KPET_YWC_ASSETC": "%RANDOM%_Assets [!assets[%%i]! %RANDOM%] created %TIME%",
+	
+	"KPET_YWC_COMPILEC": "compile = COMPLETE",
+	"KPET_YWC_INIT": "initializing",
+	"KPET_YWC_YW": "your_world.exe was successfully compiled",
+	
+	"KPET_CMD_TITLE": "Command Prompt",
+	
+	"KPET_CMD_HEADER1": "Operating System [Version 10.0.1999.2000]",
+	"KPET_CMD_HEADER2": "(c) Operating Systems. All rights reserved.",
+	
+	"KPET_CMD_ECHO": "'echo' is recognized but I don't feel like running it.",
+	
+	"KPET_CMD_CONFIRM1": "Please enter valid credentials.",
+	"KPET_CMD_CONFIRM2": "Please enter the target server.",
+	"KPET_CMD_CONFIRM3": "Please enter password.",
+	"KPET_CMD_CONFIRM4": "Please enter the access code.",
+	"KPET_CMD_CONFIRM5": "Are you sure you want to do this? Please enter the confirmatory code to confirm.",
+	
+	"KPET_CMD_DENIED": "Access denied",
+	"KPET_CMD_GRANTED": "Access granted",
+	
+	"KPET_CMD_GRANTF": "what are you looking for",
+	"KPET_CMD_GOODBYE": "goodbye friend",
+	
+	"KPET_CMD_SEQBOOT": "[system access granted]  sequence boot",
+	"KPET_CMD_GRNTPERMS": "granting permissions to kinitopet.exe",
+	
+	"KPET_CMD_RMFILE": "removing file [!assets[%%i]!] from server [\"kinito\"]",
+	"KPET_CMD_RMDB": "removing file [!names[%%i]!s_database.txt] from server [\"kinito\"]",
+	"KPET_CMD_RMWRLD": "removing file [!names[%%i]!s_world.zip] from server [\"kinito\"]",
+	"KPET_CMD_RMCORE": "removing core files...",
+	
+	"KEPT_CMD_RMDONE": "The contents of the (\"kinito\") server were successfully removed.",
+}
