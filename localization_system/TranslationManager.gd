@@ -37,6 +37,7 @@ func load_translation_files(lang):
 		
 		file.close()
 	else:
+		print("Failed loading in dialogue data. Use https://jsonlint.com/ to find any errors.")
 		return false
 		
 	if file.file_exists(cmn_path) == true:
@@ -48,6 +49,7 @@ func load_translation_files(lang):
 		
 		file.close()
 	else:
+		print("Failed loading in common data. Use https://jsonlint.com/ to find any errors.")
 		return false
 		
 	patched_dialogue = false
@@ -331,19 +333,18 @@ func _input(event):
 func _process(delta):
 	# Patch intro screen (PC)
 	_show_node_paths()
-	if files_loaded:
-		#res://-Asset/!OutOfMonitor/SelfPaint/selfpaint.tscn
-		if Input.is_key_pressed(KEY_TAB):
-			files_loaded = load_translation_files("en")
-		
-		_show_localized()
-		
-		if Data.data["lastSave"] == "never":
-			Data.data["lastSave"] = kinito_loc.kinito_common_text["COMMON_LSAVED_NEVER"]
-		
-		_patch_app000()
-		_patch_app001()
-		_patch_app003()
-		_patch_app005()
-		_patch_app007()
-		_patch_app010()
+	#res://-Asset/!OutOfMonitor/SelfPaint/selfpaint.tscn
+	if Input.is_key_pressed(KEY_TAB):
+		files_loaded = load_translation_files("en")
+	
+	_show_localized()
+	
+	if Data.data["lastSave"] == "never":
+		Data.data["lastSave"] = kinito_loc.kinito_common_text["COMMON_LSAVED_NEVER"]
+	
+	_patch_app000()
+	_patch_app001()
+	_patch_app003()
+	_patch_app005()
+	_patch_app007()
+	_patch_app010()
