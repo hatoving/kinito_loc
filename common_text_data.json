@@ -257,5 +257,5 @@
 	"KPET_CMD_RMWRLD": "removing file [!names[%%i]!s_world.zip] from server [\"kinito\"]",
 	"KPET_CMD_RMCORE": "removing core files...",
 	
-	"KEPT_CMD_RMDONE": "The contents of the (\"kinito\") server were successfully removed.",
+	"KEPT_CMD_RMDONE": "The contents of the (\"kinito\") server were successfully removed."
 }
